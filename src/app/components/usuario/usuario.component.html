@@ -1,0 +1,53 @@
+<div class="d-flex justify-content-center align-items-center vh-100 bg-light">
+  <div class="card p-4" style="width: 22rem;">
+    <div class="card-body text-center">
+      <h2>Nombre: {{ nombre }}</h2>
+      <h2>Edad: {{ edad }}</h2>
+      <h2>Nombre Capitalizado: {{ nombre | titlecase }}</h2>
+
+      <div class="d-flex flex-column gap-2 mt-3">
+        <button class="btn btn-primary" (click)="abrirModalNombre()">Cambiar nombre</button>
+        <button class="btn btn-warning" (click)="abrirModalEdad()">Cambiar edad</button>
+        <button class="btn btn-danger" (click)="reset()">Reset</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Nombre -->
+<div class="modal fade show" tabindex="-1" style="display: block;" *ngIf="mostrarModalNombre">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Nuevo Nombre</h5>
+        <button type="button" class="btn-close" aria-label="Close" (click)="cerrarModalNombre()"></button>
+      </div>
+      <div class="modal-body">
+        <input class="form-control" [(ngModel)]="nuevoNombre" placeholder="Escribe el nuevo nombre" />
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-success" (click)="guardarNombre()">Guardar</button>
+        <button class="btn btn-secondary" (click)="cerrarModalNombre()">Cancelar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Edad -->
+<div class="modal fade show" tabindex="-1" style="display: block;" *ngIf="mostrarModalEdad">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Nueva Edad</h5>
+        <button type="button" class="btn-close" aria-label="Close" (click)="cerrarModalEdad()"></button>
+      </div>
+      <div class="modal-body">
+        <input type="number" class="form-control" [(ngModel)]="nuevaEdad" />
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-success" (click)="guardarEdad()">Guardar</button>
+        <button class="btn btn-secondary" (click)="cerrarModalEdad()">Cancelar</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.principal {
+  display: flex;
+  justify-content: center;
+  align-items: center;    
+  height: 100vh;       
+  background-color: #f8f9fa;
+}
+.modal-principal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 1050;
+}
+
+.modal.show {
+  display: block;
+  background-color: rgba(0,0,0,0.5);
+}
