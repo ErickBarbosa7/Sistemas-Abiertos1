@@ -2,6 +2,7 @@
     import { Routes } from '@angular/router';
     import { CounterPageComponent } from './components/counter/counter-page.component';
     import { UsuarioComponent } from './components/usuario/usuario.component';
+import { UsuarioSignalComponent } from './components/usuario-signal/usuario-signal.component';
 
 
     export const routes: Routes = [
@@ -12,6 +13,9 @@
          path: 'usuario', component: UsuarioComponent
     },
     {
-         path: '', redirectTo: 'usuario', pathMatch: 'full' 
+         path: 'usuario-signal', component: UsuarioSignalComponent
+    },
+    {
+         path: '', redirectTo: 'usuario-signal', pathMatch: 'full' 
     }
     ];
