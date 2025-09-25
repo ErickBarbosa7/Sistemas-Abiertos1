@@ -1,0 +1,15 @@
+<div class="d-flex justify-content-center align-items-center vh-100 bg-dark">
+  <div class="card" style="width: 26rem;">
+    <div class="card-body text-center">
+      <h2>Nombre: {{ name().toUpperCase() }}</h2> 
+      <h2>Edad: {{ age() }}</h2>
+      <h4 class="card-text">{{ getHeroDescription() }}</h4>
+
+      <div class="d-flex flex-column gap-2 mt-3">
+        <button class="btn btn-warning" (click)="changeAge()">Cambiar Edad</button>
+        <button class="btn btn-primary" (click)="changeHero()">Cambiar Heroe</button>
+        <button class="btn btn-danger" (click)="resetForm()">Reset</button>
+      </div>
+    </div>
+  </div>
+</div>

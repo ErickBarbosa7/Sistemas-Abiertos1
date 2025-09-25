@@ -3,6 +3,7 @@
     import { CounterPageComponent } from './components/counter/counter-page.component';
     import { UsuarioComponent } from './components/usuario/usuario.component';
 import { UsuarioSignalComponent } from './components/usuario-signal/usuario-signal.component';
+import { HeroPageComponent } from './pages/hero/hero-page.component';
 
 
     export const routes: Routes = [
@@ -16,6 +17,9 @@ import { UsuarioSignalComponent } from './components/usuario-signal/usuario-sign
          path: 'usuario-signal', component: UsuarioSignalComponent
     },
     {
-         path: '', redirectTo: 'usuario-signal', pathMatch: 'full' 
+         path: 'hero', component: HeroPageComponent
+    },
+    {
+         path: '', redirectTo: 'hero', pathMatch: 'full' 
     }
     ];
