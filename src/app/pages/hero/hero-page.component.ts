@@ -1,4 +1,4 @@
-import { Component,signal } from "@angular/core";
+import { Component, computed, signal } from "@angular/core";
 
 @Component({
     selector: 'app-hero',
@@ -7,12 +7,16 @@ import { Component,signal } from "@angular/core";
 })
 export class HeroPageComponent {
 
-    name = signal<string> ('ironman');
+    name = signal<string>('ironman');
     age = signal<number>(45);
 
     getHeroDescription(): string {
         return `Description: ${this.name()} - ${this.age()} años`;
     }
+
+    heroDescription = computed(() => {
+        return `${this.name()} - ${this.age()} años`;
+    });
 
     changeHero(): void {
         this.name.set('Spiderman');
@@ -22,6 +26,7 @@ export class HeroPageComponent {
     changeAge(): void {
         this.age.set(60);
     }
+
     resetForm(): void {
         this.name.set('ironman'); 
         this.age.set(45);

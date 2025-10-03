@@ -1,0 +1,18 @@
+ <ol class="list-unstyled ps-3">
+          @for (character of characters(); track character.id) {
+            @if (character.power > 4000) {
+              <li class="mb-2">
+              <span class="fw-semibold">{{ character.name }}</span> — 
+              <strong 
+                [class.text-danger]="character.power > 8000"
+                [class.text-primary]="character.power < 8000">
+                Power: {{ character.power }}
+              </strong>
+            </li>
+            } @else {
+              <li class="mb-2 text-muted">
+                <strong> sin datos </strong>
+              </li>
+            }
+          }
+</ol>

@@ -1,25 +1,19 @@
+import { Routes } from '@angular/router';
 
-    import { Routes } from '@angular/router';
-    import { CounterPageComponent } from './components/counter/counter-page.component';
-    import { UsuarioComponent } from './components/usuario/usuario.component';
+import { CounterPageComponent } from './components/counter/counter-page.component';
+import { UsuarioComponent } from './components/usuario/usuario.component';
 import { UsuarioSignalComponent } from './components/usuario-signal/usuario-signal.component';
 import { HeroPageComponent } from './pages/hero/hero-page.component';
+import { DragonballPageComponent } from './dragonball-page/dragonball-page.component';
+import { DragonballSuperComponent } from './dragonball-super/dragonball-super.component';
 
-
-    export const routes: Routes = [
-    {
-         path: 'counter', component: CounterPageComponent
-    },
-    {
-         path: 'usuario', component: UsuarioComponent
-    },
-    {
-         path: 'usuario-signal', component: UsuarioSignalComponent
-    },
-    {
-         path: 'hero', component: HeroPageComponent
-    },
-    {
-         path: '', redirectTo: 'hero', pathMatch: 'full' 
-    }
-    ];
+export const routes: Routes = [
+  { path: 'counter', component: CounterPageComponent },
+  { path: 'usuario', component: UsuarioComponent },
+  { path: 'usuario-signal', component: UsuarioSignalComponent },
+  { path: 'hero', component: HeroPageComponent },
+  { path: 'dragonball', component: DragonballPageComponent }, 
+  { path: 'dragonball-super', component: DragonballSuperComponent }, 
+  { path: '', redirectTo: 'hero', pathMatch: 'full' },
+  { path: '**', redirectTo: 'hero' }
+];

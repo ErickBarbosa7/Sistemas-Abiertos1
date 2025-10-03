@@ -1,0 +1,16 @@
+<section class="row justify-content-center g-4 my-4">
+  <div class="col-12 col-md-5 col-lg-4">
+    <div class="card shadow-sm p-3">
+      <h3 class="card-title mb-3">Agregar Personaje</h3>
+      <app-character-add (onNewCharacter)="addCharacter($event)"></app-character-add>
+    </div>
+  </div>
+
+  <div class="col-12 col-md-5 col-lg-4">
+    <div class="card shadow-sm p-3">
+      <h3 class="card-title mb-3">Listado de Personajes</h3>
+
+      <app-character-list [characters]="characters()" />
+    </div>
+  </div>
+</section>
